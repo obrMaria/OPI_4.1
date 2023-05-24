@@ -29,7 +29,8 @@ class Number:
         self.second = int(input("Введите целое число >> "))
 
     def display(self):
-        print(f"{self.first} ^ {self.second} = {make_power(self.first, self.second)}")
+        result = self.first ** self.second
+        print(f"{self.first} ^ {self.second} = {result}")
 
 
 def make_power(first, second):
@@ -37,7 +38,7 @@ def make_power(first, second):
     if first == 0:
         raise ValueError
     else:
-        return first ** second
+        return Number(first, second)
 
 
 if __name__ == "__main__":
